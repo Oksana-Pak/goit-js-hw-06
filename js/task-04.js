@@ -1,11 +1,12 @@
 let counterValue = 0;
+
 const refs = {
-  Btn: document.querySelectorAll('#counter button'),
+  btn: document.querySelectorAll('#counter button'),
   spanCounter: document.querySelector('#value'),
 };
 
-refs.Btn[0].addEventListener('click', decrementCounter);
-refs.Btn[1].addEventListener('click', incrementCounter);
+refs.btn[0].addEventListener('click', decrementCounter);
+refs.btn[1].addEventListener('click', incrementCounter);
 
 function decrementCounter() {
   counterValue -= 1;

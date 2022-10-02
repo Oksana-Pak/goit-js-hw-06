@@ -18,6 +18,6 @@ const makeImageItem = ({ url, alt }) =>
 
 const imageItems = images.map(makeImageItem).join('');
 
-const imagesList = document.querySelector('.gallery');
+const imagesListRef = document.querySelector('.gallery');
 
-imagesList.insertAdjacentHTML('afterbegin', imageItems);
+imagesListRef.insertAdjacentHTML('afterbegin', imageItems);
