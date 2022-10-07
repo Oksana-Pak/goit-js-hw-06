@@ -5,11 +5,15 @@ const refs = {
   boxes: document.querySelector('#boxes'),
 };
 
-refs.createBtn.addEventListener('click', createBoxes);
+refs.createBtn.addEventListener('click', () => insertBoxes(refs.input.value));
 refs.destroyBtn.addEventListener('click', destroyBoxes);
 
+function insertBoxes(amount) {
+  destroyBoxes();
+  createBoxes(amount);
+}
+
 function createBoxes(amount) {
-  amount = refs.input.value;
   const divArray = [];
   let sizeValue = 30;
 
